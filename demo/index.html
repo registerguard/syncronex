@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	
+	<title>SyncWall</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta name="__sync_contentCategory" content="premium">
+	
+	
+	<link rel="stylesheet" href="assets/css/wiffle.min.css">
+	
+	<style>
+		<!--
+			
+			#container { width: 600px; }
+			
+			img { max-width: 100%; }
+			
+			/* Default class for modal window */
+			.modal {
+				display: block;
+				position: fixed;
+				z-index: 20;
+				top: 50px;
+				left: 50%;
+				background: white;
+				width: 300px;
+				height: 600px;
+				text-align: center;
+				border: 1px solid #000000;
+			}
+			
+			/* Default class for an overlay */
+			.ow-overlay {
+				position: fixed;
+				z-index: 10;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: #424242;
+				opacity: 0.8;
+			}
+			
+			/* Default class for both hidden overlay and modal window */
+			.ow-closed { display: none; }
+			
+			@media only screen and (min-width: 665px) {
+				
+				.modal { width: 480px; }
+				
+			}
+			
+		-->
+	</style>
+	
+</head>
+<body>
+	
+	<div class="wiffle">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat dolor eu felis pretium dictum eu a mauris. Mauris adipiscing placerat orci, sit amet placerat lectus fringilla ac. Sed lobortis volutpat risus ac pellentesque. Donec scelerisque lobortis quam ut mollis. Proin tincidunt mollis tortor, ut pretium tellus tempor porta. Praesent a leo ipsum. Curabitur et nulla nisl. Nullam volutpat euismod risus, non vestibulum eros elementum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		<p>Donec egestas metus sit amet tellus suscipit pellentesque. Mauris egestas blandit fermentum. Nulla felis nunc, tincidunt nec molestie ut, consequat sed nulla. Quisque non tortor nulla. Morbi in sapien neque, id interdum lectus. In varius auctor dignissim. Integer magna nulla, auctor vel dignissim quis, porta sit amet nisl. Quisque sit amet arcu magna, at dignissim mauris. Donec ante tortor, ultrices eget mollis a, lobortis at sem. Suspendisse potenti.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra enim sed felis faucibus malesuada. Cras nec dolor vitae justo blandit vestibulum. Fusce feugiat magna eu purus fringilla blandit. Fusce nunc lorem, ornare ac interdum at, blandit ac urna. Nulla et orci ut dolor hendrerit suscipit. Morbi sed eros est, sed feugiat lacus. Curabitur quis ligula dignissim sem sollicitudin cursus quis id lorem. Donec enim massa, gravida ultricies mattis quis, tincidunt et felis.</p>
+		<p>Proin condimentum feugiat massa, ac tempor mauris convallis in. Nulla pellentesque fermentum nibh, sed sagittis lorem bibendum eu. Nam ut mattis nisl. Proin diam ipsum, commodo et suscipit eget, suscipit quis lorem. Donec ut pretium mi. Morbi non metus at magna tincidunt tristique sit amet ut dui. Nulla ultricies ante in quam fringilla pellentesque id vel elit. Vivamus nec orci id lacus hendrerit pretium et at augue. Pellentesque sed mi molestie elit tristique varius et eget erat. Proin sit amet mauris quis ante accumsan aliquet. Integer a nunc ut lectus dapibus lobortis.</p>
+		<p>Ut a metus quam. Nunc interdum ultricies est id dapibus. Nullam quis nisi nisl. Donec ac tellus eu sapien imperdiet faucibus in in nulla. Sed imperdiet posuere fermentum. Aenean lacus odio, auctor nec posuere sit amet, ullamcorper eu felis. Integer dapibus velit nulla, a venenatis enim. Cras sit amet odio risus, ac egestas nisi. Sed dictum, orci lacinia malesuada dignissim, erat lacus pellentesque odio, adipiscing auctor augue lectus quis magna. Morbi nibh ligula, posuere eget ornare vel, consectetur nec leo. Nulla tempus porttitor massa. Nam non velit ac nunc ullamcorper rutrum ut vitae tellus. Quisque blandit risus in orci faucibus sollicitudin.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc consequat dolor eu felis pretium dictum eu a mauris. Mauris adipiscing placerat orci, sit amet placerat lectus fringilla ac. Sed lobortis volutpat risus ac pellentesque. Donec scelerisque lobortis quam ut mollis. Proin tincidunt mollis tortor, ut pretium tellus tempor porta. Praesent a leo ipsum. Curabitur et nulla nisl. Nullam volutpat euismod risus, non vestibulum eros elementum non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+		<p>Donec egestas metus sit amet tellus suscipit pellentesque. Mauris egestas blandit fermentum. Nulla felis nunc, tincidunt nec molestie ut, consequat sed nulla. Quisque non tortor nulla. Morbi in sapien neque, id interdum lectus. In varius auctor dignissim. Integer magna nulla, auctor vel dignissim quis, porta sit amet nisl. Quisque sit amet arcu magna, at dignissim mauris. Donec ante tortor, ultrices eget mollis a, lobortis at sem. Suspendisse potenti.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra enim sed felis faucibus malesuada. Cras nec dolor vitae justo blandit vestibulum. Fusce feugiat magna eu purus fringilla blandit. Fusce nunc lorem, ornare ac interdum at, blandit ac urna. Nulla et orci ut dolor hendrerit suscipit. Morbi sed eros est, sed feugiat lacus. Curabitur quis ligula dignissim sem sollicitudin cursus quis id lorem. Donec enim massa, gravida ultricies mattis quis, tincidunt et felis.</p>
+		<p>Proin condimentum feugiat massa, ac tempor mauris convallis in. Nulla pellentesque fermentum nibh, sed sagittis lorem bibendum eu. Nam ut mattis nisl. Proin diam ipsum, commodo et suscipit eget, suscipit quis lorem. Donec ut pretium mi. Morbi non metus at magna tincidunt tristique sit amet ut dui. Nulla ultricies ante in quam fringilla pellentesque id vel elit. Vivamus nec orci id lacus hendrerit pretium et at augue. Pellentesque sed mi molestie elit tristique varius et eget erat. Proin sit amet mauris quis ante accumsan aliquet. Integer a nunc ut lectus dapibus lobortis.</p>
+		<p>Ut a metus quam. Nunc interdum ultricies est id dapibus. Nullam quis nisi nisl. Donec ac tellus eu sapien imperdiet faucibus in in nulla. Sed imperdiet posuere fermentum. Aenean lacus odio, auctor nec posuere sit amet, ullamcorper eu felis. Integer dapibus velit nulla, a venenatis enim. Cras sit amet odio risus, ac egestas nisi. Sed dictum, orci lacinia malesuada dignissim, erat lacus pellentesque odio, adipiscing auctor augue lectus quis magna. Morbi nibh ligula, posuere eget ornare vel, consectetur nec leo. Nulla tempus porttitor massa. Nam non velit ac nunc ullamcorper rutrum ut vitae tellus. Quisque blandit risus in orci faucibus sollicitudin.</p>
+	</div>
+	
+	<div class="ow-overlay ow-closed"></div>
+	<div class="modal ow-closed">Hello, human!</div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="assets/js/jquery.cookie.js"></script>
+	<script src="assets/js/jquery.jsonp.js"></script>
+	<script src="assets/js/jquery.omniwindow.js"></script>
+	<script src="../syncwall/jquery.syncwall.js"></script>
+	
+	<script>
+		
+		$(document).ready(function() {
+			
+			$.syncwall();
+			
+			$('.modal').omniWindow({
+				overlay: {
+					animations: {
+						hide: function(subjects, internalCallback) {
+							subjects.overlay.fadeOut(250, function(){
+								internalCallback(subjects); // call internal callback AFTER jQuery animations will stop
+							})
+						},
+						show: function(subjects, internalCallback) {
+							subjects.overlay.fadeIn(250, function(){
+								internalCallback(subjects);
+							})
+						}
+					}
+				}
+			});
+			
+		});
+		
+	</script>
+	
+</body>
+</html>
