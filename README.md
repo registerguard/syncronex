@@ -16,9 +16,9 @@ More information coming soon.
 
 #### DEMO
 
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/syncwall/&chs=240x240)](http://registerguard.github.com/syncwall/demo/)
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=https://github.com/registerguard/syncronex/&chs=240x240)](http://registerguard.github.com/syncronex/demo/)
 
-(Scan QR code with phone and/or click to [view the latest demo](http://registerguard.github.com/syncwall/demo/).)
+(Scan QR code with phone and/or click to [view the latest demo](http://registerguard.github.com/syncronex/demo/).)
 
 ---
 
