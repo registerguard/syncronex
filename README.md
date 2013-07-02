@@ -16,7 +16,7 @@ More information coming soon.
 
 #### LEGAL
 
-Copyright &copy; 2013 [Micky Hulse](http://site.com)/[The Register-Guard](http://foo.com)
+Copyright &copy; 2013 [Micky Hulse](http://hulse.me)/[The Register-Guard](http://registerguard.com)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
