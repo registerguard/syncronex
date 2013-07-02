@@ -1,0 +1,62 @@
+<script language="cache" runat="server">
+	
+	;
+	; How to fetch the data using (SSL)HTTPS..?
+	; https://groups.google.com/d/topic/intersystems-public-cache/bYYxS8SSSVw/discussion
+	;
+	; Creating or Editing an SSL/TLS Configuration
+	; http://docs.intersystems.com/ens20091/csp/docbook/DocBook.UI.Page.cls?KEY=GCAS_ssltls#GCAS_ssltls_createedit
+	; "... it's probably enough just to create a named configuration, that is if you don't need any verification of the presented certificates."
+	;
+	
+	new sync, httprequest
+	
+	set sync("server") = "stage.syncaccess.net"
+	set sync("path") = "/po/rg/api/svcs/meter/standard?format=json"
+	set sync("contentid") = "premium_1"
+	set sync("referer") = "http://www.foo.com"
+	set sync("clientinfo") = "iPad Device"
+	
+	set httprequest = ##class(%Net.HttpRequest).%New()
+	set httprequest.Server = sync("server")
+	set httprequest.ContentType = "application/json"
+	set httprequest.Https = 1
+	do httprequest.EntityBody.Clear()
+	//do httprequest.EntityBody.Write($zv)
+	do httprequest.EntityBody.Write("{ ""sessionId"" : """", ""userID"" : """", ""contentId"" : ""Yo"", ""externalId"" : """", ""referrer"" : """", ""clientInfo"" : ""postman REST API client"" }")
+	
+	; Read the %Library.GlobalBinaryStream:
+	write ##class(%SerialStream).%Open(httprequest.EntityBody).Read()
+	
+	do httprequest.Get(sync("path"))
+	
+	set stream = httprequest.HttpResponse.Data
+	write stream.Read(stream.Size)
+	
+	w "<pre>"
+	do $system.OBJ.Dump(httprequest)
+	w "</pre>"
+	
+	kill sync, httprequest
+	
+</script>
+
+<hr>
+
+<script language="cache" runat="server">
+	
+	; Debug:
+	write !, "<pre>"
+	try {
+		set currIO = ##class(%SYS.NLS.Device).SetIO("HTML")
+		zwrite
+	}
+	catch {
+		write "ERROR: ", $ZERROR
+	}
+	if ($get(currIO) '= "") {
+		do ##class(%SYS.NLS.Device).SetIO(currIO)
+	}
+	write "</pre>"
+	
+</script>
